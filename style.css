@@ -1,0 +1,1660 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+
+    :root{
+        --color: cornflowerblue; 
+        --bg:cornflowerblue;  
+        --color1:white;
+        --color2:gray;
+        --color3:lightgray;
+        --color4:lightblue;
+        --color5:red;
+        --color6:blue;
+        --color7:orange;
+        --color8:green;
+        --color9:aqua;
+        --color10:yellow;
+        --colort:transparant;
+        --color11:lightgreen;
+        
+ 
+    }
+
+
+.container{
+    min-height: 100vh;
+    max-width: 100%;
+    background-color: #F2FFE9;
+}
+
+/*------------Nav par Stat------------*/
+
+nav{
+    display: flex;
+    background-color:var(--bg);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px 0px 0px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    z-index:999;
+    padding-right:15px ;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+
+
+nav img{
+    height: 75px;
+    width: 75px;
+    border-radius:50% ;
+    object-fit: contain;
+}
+
+/*-----------------nav par logo------------*/
+
+
+.logo{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+nav h1{
+    font-size: 40px;
+
+}
+
+
+nav h1 :nth-child(1){
+    color: var(--color6);
+}
+
+nav h1 :nth-child(2){
+    color:var(--color5);
+}
+
+nav h1 :nth-child(3){
+    color: var(--color7);
+}
+
+nav h1 :nth-child(4){
+    color: var(--color6);
+}
+
+nav h1 :nth-child(5){
+    color: var(--color8);    
+}
+
+.searchbox{
+    width: calc(24%);
+    position: relative;
+}
+.searchbox input{
+    width:100%;
+    padding: 8px 33px 8px 8px;
+    text-align: center;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    border: 1px solid black;    
+}
+
+.searchbox i{
+    position: absolute;
+    top: calc(10px);
+    right: calc(6%);
+}
+
+
+.buttontag{
+    display: flex;
+    gap: calc(15px);
+    position: relative;
+}
+
+
+.buttontag .button{
+    padding: 10px 20px 10px 20px;
+    border-radius:10px;
+    border: unset;
+    background-color:var(--color1);
+    cursor: pointer;
+}
+
+.buttontag .button:hover{
+    background-color:var(--color2);
+    transition: all 1s;
+    color: white;
+}
+
+
+.login{
+    display: flex;
+    align-items: center;
+}
+
+
+.login button{
+    padding: 10px;
+    border: unset;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+
+/*buttontag mela ulla label class name labr*/
+
+.lap{
+    display: none;
+}
+
+
+/*buttontage voda label input id name bar*/
+
+#bar{
+    display: none!important;
+}
+
+.mobileviewcontainer{
+    display: none;
+}
+
+
+.mobileviewcontainer>input:checked ~ .mobilesearchtag {
+    display: none;
+}
+
+
+/*------------Responsive navpar------------*/
+
+@media screen and (max-width:1000px) {
+    .logo h1{
+        display: none;
+    }
+    nav{
+        justify-content: space-between;
+    }
+   
+
+label p{
+    border: 2px solid var(--color2);
+    padding: 8px;
+    border-radius: 10px;
+}
+}
+
+
+@media screen and (max-width:1050px) {
+    .searchbox{
+        width: 20%;
+    }
+}
+
+
+@media screen and (max-width:850px) {
+    .buttontag{
+        position: fixed;
+        top:74px;
+        width: 25%;      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left: -100%;
+        padding: 20px;
+        background-color: var(--color9);
+        transition: all 1s;
+        gap: 35px;
+    }
+
+    .buttontag .button{
+        width: calc(72%);
+    }
+
+    .lap{
+        display: block;
+    }
+    /* navbar la erukkura search input id name */
+
+    #bar:checked ~.buttontag{
+        left: 0px;
+    }
+    .searchbox{
+        width: 50%;
+    }
+    .searchbox i{
+        right: 5%;
+    }
+}
+
+  
+@media screen and (max-width:700px) {
+      .buttontag{
+        width:30%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .login button{
+        display: none;
+    }
+  
+    .searchbox i{
+        right: 7%;
+    }
+
+}
+
+@media screen and (max-width:500px){
+    .searchbox{
+        width: 30%;
+    }
+
+    .searchbox i{
+        right: 10%;
+    }
+
+      .buttontag{
+        width: calc(40%);
+        /* top: 60px; */
+        gap: 30px;
+
+    }
+
+
+}
+
+@media screen and (max-width:400px){
+   
+    .buttontag{
+        width: 40%;
+        top: 60px;
+    }
+
+    .searchbox i{
+        right: 12%;
+        top: 10px;
+    }
+
+    .mobileviewcontainer label>i{
+        display: block;
+    }
+
+}
+
+
+/* ---------------------------Navbar closed----------------  */
+
+/*--------------------Home page section stat-----------------*/
+
+section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section img{
+    position: relative;
+    padding-top: 75px;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    filter: brightness(60%);
+}
+
+/* Home image kkulla erukkura content*/
+.min-section{
+    position: absolute;
+    color:var(--color1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Home section (Dounload Your Books) Word span*/
+.min-section span{
+    font-size: 60px;
+}
+
+.animation1,.animation2,.animation3{
+    display: inline-block;
+    padding: 0px 10px 0px 10px;
+    letter-spacing: 11px;
+    
+}
+
+/* (Click to Download)  home section sentense */
+.min-section p{
+    font-size: 40px;
+}
+
+/* home section button tag */
+
+.mainbutton{
+    background-color: var(--bg);
+    padding: 10px;
+    border-radius:20px;
+    animation-name:mainbutton;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    width: 180px;
+    margin-top: 20px;
+    animation-timing-function: linear;
+}
+
+.mainbutton:hover{
+        /* box-shadow: 5px 0px 5px yellow,0px 5px 5px yellow,0px -5px 5px yellow,-5px 0px 5px yellow; */
+        /* box-shadow: 5px 0px 5px navy,0px 5px 5px navy,0px -5px 5px navy,-5px 0px 5px navy; */
+        box-shadow: 5px 0px 5px aqua,0px 5px 5px aqua,0px -5px 5px aqua,-5px 0px 5px aqua;
+
+
+        transition: 0.2s;
+
+}
+
+.min-section button{
+    position: relative;
+    padding:10px;
+    font-size: 16px;
+    width: 160px;
+    border: unset;
+    border-radius: 20px;
+    color:var(--color1);
+    background-color:var(--bg);
+
+}
+
+
+.min-section button a{
+    text-decoration:none;
+}
+
+/*Home section Mainbutton animation*/
+
+@keyframes mainbutton {
+    0%{
+        width: 0px;
+    }
+    25%{
+        width:40px;
+    }
+    50%{
+        width: 80px;
+    }
+    75%{
+        width: 120px;
+    }
+    100%{
+        width: 160px;
+    }
+    
+}
+
+/* headline(Download Your Books) sentanse animation stat */
+
+.animation span{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: -14px;
+    display: inline-block;
+    animation-name: head;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    color:var(--color1);
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+.animation1 :nth-child(1){
+    animation-delay: 1s;
+}
+
+.animation1 :nth-child(2){
+    animation-delay: 1.2s;
+}
+
+.animation1 :nth-child(3){
+    animation-delay: 1.4s;
+}
+
+.animation1 :nth-child(4){
+    animation-delay: 1.6s;
+}
+.animation1 :nth-child(5){
+    animation-delay: 1.8s;
+}
+.animation1 :nth-child(6){
+    animation-delay: 2s;
+}
+.animation1 :nth-child(6){
+    animation-delay: 2.2s;
+}
+.animation1 :nth-child(7){
+    animation-delay: 2.4s;
+}
+.animation1 :nth-child(8){
+    animation-delay: 2.6s;
+}
+.animation2 :nth-child(1){
+    animation-delay: 2.8s;
+}
+.animation2 :nth-child(2){
+    animation-delay: 3s;
+}
+
+.animation2 :nth-child(3){
+    animation-delay: 3.2s;
+}
+
+.animation2 :nth-child(4){
+    animation-delay: 3.4s;
+}
+
+.animation3 :nth-child(1){
+    animation-delay: 3.6s;
+}
+
+.animation3 :nth-child(2){
+    animation-delay: 3.8s;
+}
+
+.animation3 :nth-child(3){
+    animation-delay: 4s;
+}
+
+.animation3 :nth-child(4){
+    animation-delay: 4.2s;
+}
+
+.animation3 :nth-child(5){
+    animation-delay: 4.4s;
+}
+
+.animation3 :nth-child(6){
+    animation-delay: 4.6s;
+}
+
+
+.animation {
+    transform-style: preserve-3d;
+}
+
+
+@keyframes head{
+    from{
+        transform: rotateY(-360deg);
+    }
+
+    to{
+        color:var(--color5);
+    } 
+
+}
+
+
+.min-section .mainpra{
+    letter-spacing: -3px;  
+}
+
+/* (click to Download) sentance animation Stat*/
+
+.mainpra span{
+    animation-name: homepra;
+    animation-duration: 5s;
+    animation-delay: 6s;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing:-5px;
+    font-size: 40px;
+}
+
+.mainpra :nth-child(13){
+    animation-delay:6s ;
+}
+.mainpra :nth-child(12){
+    animation-delay:6.2s ;
+}
+.mainpra :nth-child(11){
+    animation-delay:6.4s ;
+}
+.mainpra :nth-child(10){
+    animation-delay:6.6s ;
+}
+.mainpra :nth-child(9){
+    animation-delay:6.8s ;
+}
+.mainpra :nth-child(8){
+    animation-delay:7s ;
+}
+.mainpra :nth-child(7){
+    animation-delay:7.2s;
+}
+.mainpra :nth-child(6){
+    animation-delay:7.4s ;
+}
+.mainpra :nth-child(5){
+    animation-delay:7.6s ;
+}
+.mainpra :nth-child(4){
+    animation-delay:7.8s ;
+}
+.mainpra :nth-child(3){
+    animation-delay:8s ;
+}
+.mainpra :nth-child(2){
+    animation-delay:8.2s ;
+}
+.mainpra :nth-child(1){
+    animation-delay:8.4s ;
+}
+
+
+
+@keyframes homepra {
+    from{
+    color:var(--color9);
+}    
+to{
+    color:var(--color9);
+}
+}
+
+
+.min-section button{
+    display: inline-block;
+
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+
+
+/* Books button fuction stat */
+
+.twoBook{
+    position:fixed;
+    height: 280px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(150px);
+    display: none;
+    border-radius: 10px;
+    background-color: var(--color2);
+    border: 1px solid black;
+
+}
+
+/* Click Books Right Side Button */
+.focusfirstbooks{
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+}
+
+/* Click Books  left side button */
+.focus2ndbooks{
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    top: 40px;
+}
+
+/* Click Books button a tag  */
+
+.focusfirstbooks a,.focus2ndbooks a{
+    height:200px;
+    width: 160px;
+}
+
+/* Click Books Button Img tag*/
+
+.focusfirstbooks img,.focus2ndbooks img{
+    height: 200px;
+    width: 80%;
+    object-fit: cover;
+    border-radius: unset;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px lightgray;
+}
+.focusfirstbooks p,.focus2ndbooks p{
+    padding-top: 5px;
+    color: white;
+}
+
+/* twobooks tag checked*/
+
+#buttonview:checked ~.twoBook{
+    display: block;
+}
+
+
+/* Books button Icon tag*/
+
+#buttonview:checked~.delectmark{
+    display: block;
+}
+
+/* Checkbox tag*/
+
+.topbuttoncheck{
+    display: none;
+}
+
+/*  Books button icon tag */
+.delectmark i{
+    position: absolute;
+    top: 160px;
+    left: 450px;
+    padding-left: 20px;
+    z-index: 20;
+    font-size: 20px;
+}
+
+
+.twoBook i{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+
+
+.twoBook i:hover{
+    color:var(--color10);
+}
+
+
+/*---------- Book fuction close*-----------/
+
+
+/*----------- Notes button function stat----------*/
+
+.questiontag{         
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    padding-top: 25px;
+    position:absolute;
+    top: 150px;
+    left: 300px;
+    height: 240px;
+    width: 440px;
+    background-color:rgb(7, 7, 34);
+    border-radius:10px;
+    display: none;
+    color: white;
+
+}
+
+/* Notes button checkbox Class Name*/
+
+.quetioninput{
+    display: none;
+}
+
+/* question button (X)delect simapal taq */
+
+.questiondelect i {
+    position: absolute;
+    top:15px;
+    right: 2%;
+    z-index: 15;
+}
+
+.questiondelect i:hover{
+    color:var(--color10);
+}
+
+/* Notes button tag action image right side */
+
+.questioncontent1{
+    float: left;
+    width: 50%;
+}
+
+/* Notes button tag action image right side */
+
+.questioncontent2{
+    float: right;
+    width: 50%;
+}
+
+/* Notes button action tage right and left image */
+.questioncontent1 img,.questioncontent2 img{
+    height: 160px;
+    width: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+
+#questioncheck:checked~.questiontag{
+    display: block;
+}
+
+
+/*-------Exam button tag-------------*/
+
+.examtag{
+    position: absolute;
+    top: 60px;
+    width: 200px;
+    height: 200px;
+    background-color:gray;
+    display: none;
+}
+
+.examtag img{
+    margin-top:5px;
+    margin: auto;
+    height: 90%;
+    width: 85%;
+    padding-top:25px ;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.examtag i{
+    text-align: end;
+    padding:5px;
+    display: block;
+    position: absolute;
+    right: 0;
+    color:var(--color1);
+}
+
+/* #exam enpathu exam buttonel ulla checkbox id name */
+#exam:checked~.examtag{
+    display: block;
+}
+
+.examtagdiv input{
+    display:none;
+}
+
+.examtag i:hover{
+    color: var(--color5);
+}
+
+/*Exam button Close*/
+
+/*------------------About section stat----------------------*/
+
+.section2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.section2 img{
+    width: 530px;
+    height: 300px;
+    box-shadow: 5px 5px 5px  gray,-5px -5px 5px gray;
+    border-radius: 20px;
+}
+
+
+
+.section2 .pra{
+    height: 300px;
+    width: 530px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.pra p{
+    height: 300px;
+}
+
+
+.section2 .pra h2{
+    margin-bottom: 10px;
+    
+}
+
+.pra span{
+    display: inline-block;
+    font-size: 40px;
+}
+
+
+.pra h2 :nth-child(1){
+    color:var(--color6);
+    transition: 1s;
+    
+}
+
+
+.pra h2 :nth-child(2){
+    color:var(--color5);
+    transition: 1.6s;
+}
+
+.pra h2 :nth-child(3){
+    color:var(--color7);
+    transition: 2.2s;
+}
+
+.pra h2 :nth-child(4){
+    color:var(--color6);
+    transition: 2.8s;
+}
+
+.pra h2 :nth-child(5){
+    color:var(--color8);
+    transition: 3.4s;
+}
+
+ .pra:hover h2>span{
+     transform: rotateY(360deg);
+     transition: all 1s;
+     transition-delay: 0.1s;
+}
+
+/* About main div*/
+.mainsection{
+       box-shadow: -3px 0 gray, 0 3px gray, 3px 0 gray, 0 -3px gray;
+       display: flex;
+       margin-bottom: 30px;
+       flex-direction: column;
+       align-items: center;
+       width: 95%;
+       border-radius: 5px;
+}
+/* First image and text tag section2content class*/
+/* Second image and Content div section2content2 class */
+
+.section2content{
+   width: 100%;
+   padding: 30px 10px 10px 10px;
+   display: flex;
+   justify-content:center;
+   align-items:center;
+   column-gap: 6%;
+}
+
+
+.section2content2{
+    margin-top:10px;
+    width: 100%;
+    padding: 40px 10px 20px 10px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 20px;
+}
+
+.section2 h1{
+    font-size: 35px;
+    text-align: center;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color:var(--color7);
+    padding:10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+    
+}
+
+
+.section2 img:hover{
+    /* transform:scale(0.90) ; */
+    transform:rotateY(180deg);
+    transition:all 2s;
+    transition-delay: 1s;
+}
+
+/*-----------------About line finish---------------------------*/
+
+/*-------------- Book Download page Stat----------------------- */
+
+.section3{
+    width: 100%;
+    min-height: 100vh;
+    margin-right: 40px;
+
+}
+
+.section3 h1{
+    font-size: 35px;
+    text-align: center;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color:var(--color7);
+    padding: 20px 10px 20px 10px;
+}
+
+.section3main{
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto auto auto auto ;
+    padding: 40px 10px 40px 10px;
+    width: 95%;
+    gap: 30px;    
+}
+
+/* Books divs */
+
+.section3main .box{
+    height: 240px;
+    width:195px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: calc(10px);
+    box-shadow: 5px 0px 5px gray,0px 5px 5px gray,0px -5px 5px gray,-5px 0px 5px gray;
+}
+
+.box p i{
+    font-size: 14px;
+}
+
+.box p i:hover{
+    color: red;
+}
+.section3main .box:hover{
+    transform: scale(1.1);
+    transition: all 1s;
+}
+
+/* Books anger tag  */
+.box a{
+    height: 80%;
+    width:85%;
+    display: flex;
+    justify-content: center;
+}
+/* Books image tag */
+.box img{
+    height:100%;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 1px 0px 1px gray,0px 1px 1px gray,0px -1px 1px gray,-1px 0px 1px gray;
+
+}
+
+/* Books peragrap tag (Download) word tag */
+
+.box p{
+    padding: 10px 0px 10px 0px;
+    animation-name: download;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Books peragrap tag animation (download) word tag*/
+
+@keyframes download {
+    from{
+        padding:10px 0px 5px 0px;
+    }
+    to{
+        padding: 5px 0px 10px 0px;
+    }
+    
+}
+
+
+/* -------------------------Book download page close------------------------------------ */
+
+
+/* -----------------------------Ariticle stat ------------------------------- */
+
+article h1{
+    font-size: 35px;
+    color:var(--color7);
+    padding: 10px 0px 10px 63px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.articlecontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+    
+}
+article{
+    margin-bottom: 35px;
+}
+.articlemain{
+    width: 90%;
+    padding: 5px 20px 5px 5px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid black;
+    border-radius:10px;
+    box-shadow: 2px 0px 2px gray,0px 2px 2px gray,0px -2px 2px gray,-2px 0px 2px gray;
+
+}
+
+.articlemain img{
+    height: 130px;
+    width: 180px;
+    margin: 5px 10px 5px 13px;
+    box-shadow: 3px 0px 3px gray,0px 3px 3px gray,0px -1px 1px gray,-1px 0px 1px gray;
+
+}
+
+.articlemain p{
+    height: 110px;
+    overflow-Y: scroll;
+    overflow: hidden;
+}
+
+
+/*-------------------------Article finish----------------------*/
+footer{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(16, 16, 54);
+    color: white;
+    padding-bottom:30px;
+
+}
+
+.footercontent{
+    margin: 10px;
+    display: grid;
+    /* width: 100%; */
+    grid-template-columns: auto auto auto auto;
+    justify-content:space-around;
+    margin: auto;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+/* footer1st footer2nd footerjoin footerimage ist a section div*/
+
+footer .footer1st,.footer2nd,.footerjoin,.footerimage{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.footer3rd{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer4th{
+    display: flex;
+    flex-direction: column;
+    
+}
+footer a{
+    padding-left: 5px;
+}
+/* Footer icon */
+.footer4th i{
+    height: 40px;
+    color: white;
+    width: 40px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color:var(--color8);
+    /* margin-left: 5px; */
+}
+.footer4th h1{
+    padding-bottom: 20px;
+}
+
+ .footer4th a{
+    padding: 0;
+}
+
+.footerimage{
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+    width: 90%;
+    padding-top: 30px;
+}
+
+.copyright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.copyright h1{
+    text-align: center;
+    padding: 10px;
+}
+
+.copyright p{
+    width: 80%;
+    overflow-Y: scroll;
+    overflow: hidden;
+}
+
+.footerimage img{
+    height:120px;
+    width:120px;
+}
+
+.imagecontent1,.imagecontent2{
+    position: relative;
+}
+
+.gifimg{
+    position: absolute;
+    left: 0;
+}
+
+.imagecontent1:hover .gifimg{
+    display: none;
+}
+
+.imagecontent2:hover .gifimg{
+    display: none;
+}
+
+
+/* -----------Login Page style stat----------- */
+
+/* Home page loging Button tage */
+
+.logincard{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    top: calc(100px);
+    left: calc(35%);
+    background-color:rgb(7, 7, 34);
+    width: calc(35%);
+    justify-content: center;
+    align-items: center;
+    height:400px;
+    gap: 30px;
+    display: none;
+}
+
+
+.logincard input{
+    width: 80%;
+    border-radius: 25px;
+    border: unset;
+    padding: 10px 40px 10px 20px ;
+    border: 2px solid var(--color9);
+    outline:var(--color5);
+    background-color:var(--colort);
+}
+
+.logincard ::placeholder{
+    color: var(--color9);
+    
+}
+
+.logintagbutton{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logintagbutton a{
+    width: calc(30%);
+    background-color: var(--colort);
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid var(--color9);
+    color:var(--color9);
+}
+
+
+/* login content checked */
+
+.login .settingcheck:checked~.logincard{
+    display:flex;
+}
+
+
+.login .settingcheck{
+    display: none;
+}
+
+.logincard input{
+    position: relative;
+    color: white;
+}
+
+.logincard input:focus{
+    box-shadow: 5px 0px 5px gray,0px 5px 5px gray,0px -5px 5px gray,-5px 0px 5px gray;
+}
+
+
+/* Logincard la erukkura delect icon vod class*/
+.logincard .xtag{
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    color: aqua;
+    
+}
+.logincard i{
+    position: absolute;
+    z-index: 20;
+    top: 65px;
+    right: 65px;
+    padding-left: 10px;
+    color: var(--color9);
+}
+.logincard .inputemail{
+
+    top: 136px;
+}
+
+.logincard .inputkey{
+    top: 208px;
+}
+.logincard .inputpass{
+    top: 275px;
+}
+
+/* ---------------login page style close----------------- */
+
+
+i{
+    cursor: pointer;
+}
+
+/*------------------------Rseposive stat------------------------*/
+@media  screen and (max-width:1150px) {
+
+    .section3main{
+        grid-template-columns: auto auto auto auto;
+    }
+    .logincard i{
+        right: 60px;
+    }
+
+}
+
+
+
+@media screen and (max-width:1000px) {
+    .min-section span{
+        font-size: 45px;
+    }
+    .mainpra span{
+        font-size: 35px;
+    }
+/* ------------------home finiz---------------------- */
+
+    .section2content,.section2content2{
+       flex-direction: column;
+       gap:50px;
+       width: 80%;
+    }
+
+    .section2content2{
+        flex-direction: column-reverse;
+        box-shadow: 0px;
+    }
+
+    .section2content>img,.pra,.section2content2>img,.pra{
+        width: 100%;
+    }
+
+   .section2 .pra{
+        height: 300px;
+        width:100%;
+        padding-bottom: 5px;
+    }
+
+    .pra p{
+        height: 220px;
+        padding-bottom:20px ;
+        overflow-x: scroll;
+    }
+
+    .section2content,.section2content2{
+        align-items: unset;
+    }
+
+    .mainsection{
+        box-shadow: unset;
+    }
+
+    .logintagbutton a{
+    width: 40%;
+}
+    footer .footercontent{
+        grid-template-columns: auto auto auto;
+    }
+
+}
+
+    /* ---------------------About finiz----------------------- */
+    
+    
+@media screen and (max-width:920px) {
+ 
+    /* Books page */
+    .section3main{
+        grid-template-columns: auto auto auto;
+    }
+
+    .logincard i{
+        right: 65px;
+    }
+
+    .logincard{
+        width: calc(45%);
+        left: 28%;
+    }
+    
+}
+
+@media screen  and (max-width:750px){
+    /* Notes Button tag*/
+    .questiontag{
+        left: 150px;
+    }   
+    .logincard i{
+        right: 60px;
+    }
+    
+    /* .logincard{
+        width: 55%;
+        left: 20%;
+    } */
+
+    .animation span{
+        font-size: 40px;
+    }
+
+}
+
+@media screen  and (max-width:700px) {
+
+/* Nav login button */
+    .logincard{
+    width:50%;
+    left: 26%;
+} 
+}
+
+@media screen  and (max-width:600px){
+    /* Nav Notes Button tag */
+    .questiontag{
+        left: 80px;
+    }
+    /* Nav (Click to Download) word tag*/
+    .mainpra span{
+        font-size: 30px;
+    }
+
+    .mainsection{
+        gap: 15px;
+    }
+
+   
+
+}
+
+
+@media screen and (max-width:850px){
+    /* Nav Books Button tag*/
+    .twoBook{
+        right:calc(5%);
+    }
+
+    /* Nav Notes Button tag*/
+    .questiontag{
+        right: calc(5%);
+    }
+
+    footer .footercontent{
+        grid-template-columns: auto auto ;
+    }
+}
+
+
+@media screen and (max-width:700px) {
+    /* About page */
+    .section3main{
+    grid-template-columns:auto auto;
+        
+    }
+     /* Reference page */
+     .articlemain p{
+        overflow-y: scroll;
+    }
+
+}
+
+
+
+@media screen and (max-width:550px) {
+
+    /* loging card */
+    .logincard i{
+        right: 35px;
+    }
+
+    /* Nav Books Button tag */
+    .twoBook{
+        height: 200px;
+        width: 350px;
+        flex-direction: column;
+    }
+
+    .focusfirstbooks .focus2ndbooks{
+        width: 50%;
+        position: absolute;
+        left: 0px;
+        top: 10px;
+    }
+    .focusfirstbooks a,.focus2ndbooks a{
+        height:120px;
+        width: 100px;
+    }
+    
+    .focusfirstbooks img,.focus2ndbooks img{
+        height: 120px;
+        width: 80%;
+        object-fit: cover;
+        border-radius: unset;
+        border-radius: 10px;
+    }
+    .twoBook i{
+        position: absolute;
+        top: 10px;
+        left: 86%;
+    }
+
+    /* Nav Notes Button tag  */
+    .questiontag{
+        height: 210px;
+        width: 350px;
+        left: 60px;
+    }
+
+    .questioncontent1 img,.questioncontent2 img{
+        height: 120px;
+        width: 150px;
+    }
+    /* Nav Login Button Tag */
+    .logincard{
+        width: 70%;
+        left: 15%;
+    
+    }
+    .logincard input{
+        width: 90%;
+    }
+    .logintagbutton{
+        width: 90%;
+    }
+
+    /* Footer*/
+    footer .footercontent{
+        width: 100%;
+        justify-content:center;
+        grid-template-columns: auto;
+    }
+
+    .footerimage{
+        gap: 15px;
+    }
+
+
+
+   
+}
+
+
+@media screen and (max-width:450px) {
+    .min-section{
+        gap: 40px;
+        padding-top: 30px;
+    }
+    .animation span{
+    font-size: 38px;
+    }
+
+    /* About page */
+    .section3main{
+    grid-template-columns:auto;
+    }
+    
+    /* Nav Notes Button tag */
+    .questiontag{
+        left: 25px;
+    }
+}
+
+
+
+@media screen and (max-width:400px) {
+
+    nav img{
+        height: 60px;
+        width: 60px;
+    }
+
+    .min-section{
+        gap: 10px;
+        padding: 0px;
+    }
+    section img{
+        padding-top: 60px;
+        height: 80vh;
+    }
+    /* Home (Download Your Books) Word tag  */
+    .min-section span{
+        font-size: 30px;
+    }
+
+    .mainpra span{
+        font-size: 28px;
+    }
+
+    /* Nav Books button tag */
+    .twoBook{
+        height: 200px;
+        width: 300px;
+    }
+    /* Nav Notes button tag */
+    .questiontag{
+        height: 210px;
+        width: 300px;
+        left: 10px;
+    }
+
+    .questioncontent1 img,.questioncontent2 img{
+        height: 120px;
+        width: 120px;
+    }
+   
+
+    .logincard{
+        top: 90px;
+        width: 80%;
+        left: 10%;
+    }
+
+    .section3main {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .section3main .box{
+        width: 75%;
+        margin: auto;
+        height: 320px;
+        
+    }
+
+    .box a{
+        width: 100%;
+    }
+
+    .examtag{
+        left: 60%;
+        top: 50%;
+
+    }
+
+}
+
+@media screen and (max-width:350px) {
+        .animation span{
+
+        }
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background-color:#f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #888;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #555;
+}
+
+
+

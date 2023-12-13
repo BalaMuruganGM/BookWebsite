@@ -1,0 +1,148 @@
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: #ECF4D6;
+}
+.Questionhtml{
+    min-height: 90vh;  
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 10px;
+    max-width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.texttag{
+    width: 100%;
+    height: 60px;
+    background-color: #7071E8;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 35px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #7ED7C1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1:hover{
+    font-size: 28px;
+    transition: all 1s;
+
+}
+.Notes{
+    position: relative;
+    min-height: 80vh;
+    width:95%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap:40px;
+    left: -100%;
+    justify-content: center;
+    align-items:center;
+    transition: all 1s;    
+}
+
+.Questionhtml input{
+    display: none;
+}
+
+input:checked ~.Notes{
+    left: 0px;
+}
+
+.Qbox{
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.Qbox img{
+    height: 200px;
+    width: 160px;
+    border-radius:10px;
+    box-shadow: 3px 3px 3px gray;
+    box-shadow: 5px 0px 5px gray, 0px 5px 5px gray, 0px -1px 1px gray, -1px 0px 1px gray;;
+
+}
+.Qbox img:hover{
+    transform: scale(1.1);
+    transition: all 1s;
+}
+
+@media screen  and (max-width:1000px){
+    .Notes{
+        grid-template-columns: auto auto auto auto;
+    }
+    .texttag{
+        margin-bottom: 30px;
+    }
+}
+
+@media screen  and (max-width:800px){
+    .Notes{
+        grid-template-columns: auto auto auto;
+    }
+
+}
+
+@media screen  and (max-width:600px){
+    .Notes{
+        grid-template-columns: auto  auto;
+    }
+}
+
+@media screen  and (max-width:400px){
+    .Notes{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .Notes .Qbox img{
+        width: 280px;
+        height: 350px;        
+    }
+    h1{
+    font-size: 20px;
+}
+h1:hover{
+    font-size: 18px;
+}
+}
+
+@media screen and (max-width:350px){
+    .Notes .Qbox img{
+        width: 250px;
+        height: 300px;
+    }
+}
+
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background-color:#f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #888;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #555;
+}
